@@ -2,3 +2,10 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+<p>
+<% if current_user %>
+  <%= link_to "Sign Out", session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign In", new_session_path %>
+<% end %>
+</p>
