@@ -1,0 +1,20 @@
+<h1>Edit <%= @place.name %></h1>
+<p>
+  <%= form_with(model: @place, local: true) do |f| %>
+    <ul>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </li>
+      <li>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </li>
+      <li>
+        <%= f.label :category %>
+        <%= f.text_field :category %>
+      </li>
+    </ul>
+    <%= f.submit %>
+  <% end %>
+</p>
