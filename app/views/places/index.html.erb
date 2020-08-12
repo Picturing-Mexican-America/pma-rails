@@ -1,0 +1,7 @@
+<% @places.each do |place| %>
+  <h3><%= place.name %></h3>
+  <p><%= place.description %></p>
+  <p><%= place.category %></p>
+  <p><%= link_to "Edit Place", edit_place_path(place) %></p>
+  <p><%= link_to "Delete Place", place, method: :delete, data: { confirm: "Are you sure?" } %></p>
+<% end %>
