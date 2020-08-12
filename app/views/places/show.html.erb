@@ -3,3 +3,4 @@
 <p><%= @place.category %></p>
 <p><%= @place.created_at %></p>
 <p><%= @place.updated_at %></p>
+<%= link_to "Delete Place", @place, method: :delete, data: { confirm: "Are you sure?" } %>
