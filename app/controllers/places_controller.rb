@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+  before_action :require_signin, except: [:index, :show]
+
   def index
     @places = Place.all
     respond_to do |format|
