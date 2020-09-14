@@ -1,7 +1,25 @@
-<% @places.each do |place| %>
-  <h3><%= place.name %></h3>
-  <p><%= place.description %></p>
-  <p><%= place.category %></p>
-  <p><%= link_to "Edit Place", edit_place_path(place) %></p>
-  <p><%= link_to "Delete Place", place, method: :delete, data: { confirm: "Are you sure?" } %></p>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @places.each do |place| %>
+      <tr>
+        <td><%= place.name %></td>
+        <td><%= place.description %></td>
+        <td><%= place.category %></td>
+        <td><%= link_to 'Show', place %></td>
+        <td><%= link_to 'Edit', edit_place_path(place) %></td>
+        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New Place', new_place_path %>

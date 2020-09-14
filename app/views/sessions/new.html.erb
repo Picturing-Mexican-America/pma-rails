@@ -1,12 +1,17 @@
 <h1>Sign In</h1>
 
 <%= form_with(url: session_path, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
 
-  <%= f.label :email %>
-  <%= f.email_field :email, autofocus: true %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit "Sign In" %>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  <div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Sign In" %>
+  </div>
 <% end %>
