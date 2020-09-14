@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def require_signin
-    return unless current_user
+    return if current_user
 
     redirect_to new_session_url, alert: 'Sign in required'
   end

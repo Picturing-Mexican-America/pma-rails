@@ -1,13 +1,11 @@
 <h2>PMA Backend</h2>
-<p>
-  There are currently <%= @place_count %> places in the system.
-</p>
-<p>
 <% if current_user %>
+  <p>
+    There are currently <%= @place_count %> places in the system.
+  </p>
+  <p><%= link_to "Places", places_path %></p>
   <%= link_to "Sign Out", session_path, method: :delete %>
 <% else %>
   <%= link_to "Sign In", new_session_path %>
 <% end %>
 </p>
-
-<p><%= link_to "New Place", new_place_path %>
