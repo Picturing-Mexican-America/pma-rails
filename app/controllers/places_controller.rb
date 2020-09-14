@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :require_signin, except: [:index, :show]
+  before_action :require_signin
 
   def index
     @places = Place.all
