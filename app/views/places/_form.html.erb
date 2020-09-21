@@ -1,12 +1,22 @@
 <%= form_with(model: @place, local: true) do |f| %>
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :en_name %>
+    <%= f.text_field :en_name %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.label :es_name %>
+    <%= f.text_field :es_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :en_description %>
+    <%= f.text_area :en_description %>
+  </div class="field">
+
+  <div class="field">
+    <%= f.label :es_description %>
+    <%= f.text_area :es_description %>
   </div class="field">
 
   <div class="field">
