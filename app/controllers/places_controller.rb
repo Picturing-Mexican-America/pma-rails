@@ -42,6 +42,10 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    params.require(:place).permit(:name, :description, :category)
+    params.require(:place).permit(:en_name,
+                                  :es_name,
+                                  :en_description,
+                                  :es_description,
+                                  :category)
   end
 end

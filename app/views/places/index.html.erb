@@ -11,8 +11,8 @@
   <tbody>
     <% @places.each do |place| %>
       <tr>
-        <td><%= place.name %></td>
-        <td><%= place.description %></td>
+        <td><%= place.en_name %></td>
+        <td><%= place.en_description %></td>
         <td><%= place.category %></td>
         <td><%= link_to 'Show', place %></td>
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
