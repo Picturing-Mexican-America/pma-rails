@@ -6,6 +6,7 @@ class PlacesController < ApplicationController
     respond_to do |format|
       format.json { render json: @places }
       format.html
+      format.csv { send_data @places.to_csv }
     end
   end
 
@@ -46,8 +47,6 @@ class PlacesController < ApplicationController
                                   :es_name,
                                   :en_description,
                                   :es_description,
-                                  :category,
-                                  :lat,
-                                  :lon)
+                                  :category)
   end
 end
