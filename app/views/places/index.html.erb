@@ -4,6 +4,8 @@
       <th>Name</th>
       <th>Description</th>
       <th>Category</th>
+      <th>Latitude</th>
+      </th>Longituge</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -14,9 +16,21 @@
         <td><%= place.en_name %></td>
         <td><%= place.en_description %></td>
         <td><%= place.category %></td>
+        <td><%= place.lat %></td>
+        <td><%= place.lon %></td>
         <td><%= link_to 'Show', place %></td>
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
         <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+        <td><%= place.es_name %></td>
+        <td><%= place.es_description %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
       </tr>
     <% end %>
   </tbody>
