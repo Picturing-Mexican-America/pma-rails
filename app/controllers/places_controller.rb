@@ -47,6 +47,8 @@ class PlacesController < ApplicationController
                                   :es_name,
                                   :en_description,
                                   :es_description,
-                                  :category)
+                                  :category,
+                                  :lat,
+                                  :lon)
   end
 end

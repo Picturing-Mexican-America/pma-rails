@@ -1,18 +1,23 @@
-<table>
+<table >
   <thead>
-    <tr>
+    <tr >
+      <th>ID</th>
       <th>Name</th>
       <th>Description</th>
       <th>Category</th>
-      <th>Latitude</th>
-      </th>Longituge</th>
+      <th>Lat</th>
+      <th>Long</th>
       <th colspan="4"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @places.each do |place| %>
       <tr>
+        <td colspan="100%"><hr/></td>
+      </tr>
+      <tr>
+        <td><%= place.id %> </td>
         <td><%= place.en_name %></td>
         <td><%= place.en_description %></td>
         <td><%= place.category %></td>
@@ -22,17 +27,14 @@
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
         <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <tr>
+        <td></td>
         <td><%= place.es_name %></td>
         <td><%= place.es_description %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      <tr>
-      </tr>
+        <td colspan="6"></td>
+      </tr>      
     <% end %>
+    
   </tbody>
 </table>
 <br>

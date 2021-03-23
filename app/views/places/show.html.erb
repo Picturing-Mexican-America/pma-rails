@@ -1,22 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Places', places_path %> | 
+<%= @place.en_name %> |
+<%= link_to 'Edit', edit_place_path(@place) %> 
+
 <p>
-  <strong>En Name:</strong>
+  <strong>Title (EN):</strong>
   <%= @place.en_name %>
 </p>
 
 <p>
-  <strong>Es Name:</strong>
+  <strong>Title (ES):</strong>
   <%= @place.es_name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description (EN):</strong>
   <%= @place.en_description %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description (ES):</strong>
   <%= @place.es_description %>
 </p>
 
@@ -26,14 +30,12 @@
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Latitude:</strong>
   <%= @place.lat %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Longituge:</strong>
   <%= @place.lon %>
 </p>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
