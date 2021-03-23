@@ -49,6 +49,7 @@ class PlacesController < ApplicationController
                                   :es_description,
                                   :category,
                                   :lat,
-                                  :lon)
+                                  :lon, 
+                                  :remote_img)
   end
 end
